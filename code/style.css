@@ -1,0 +1,21 @@
+.img-logo {
+    width: 20%;
+}
+.img-header {
+    width: 100%;
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: grey;
+    color: white;
+}
+h2 {
+    text-align: center;
+}
+li {
+    list-style-type: none;
+}
+.card {
+    display: inline-block;
+}
