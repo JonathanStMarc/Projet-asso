@@ -1,7 +1,10 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(226, 226, 123) !important;
+    background-color: rgb(228, 228, 172) !important;
+}
+a {
+    font-size: 1.5rem;
 }
 .img-logo {
     width: 20%;
@@ -20,9 +23,6 @@ footer {
 h2 {
     text-align: center;
 }
-.button-hover:hover {
-    font-size: 2rem;
-}
 li:not(.puceOn) {
     list-style-type: none;
 }
@@ -39,13 +39,22 @@ li:not(.puceOn) {
     color: red;
     font-size: 1.5rem;
 }
+.slogan-1:hover {
+    font-size: 2.5rem;
+}
 .slogan-2 {
     color: green;
     font-size: 1.5rem;
 }
+.slogan-2:hover {
+    font-size: 2.5rem;
+}
 .slogan-3 {
     color: black;
     font-size: 1.5rem;
+}
+.slogan-3:hover {
+    font-size: 2.5rem;
 }
 .photo {
     width: 20rem;
