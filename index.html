@@ -55,15 +55,31 @@
                                     >
                                 </li>
                                 <li class="navbar-item">
-                                    <a class="nav-link" href="évènements.html"
+                                    <a
+                                        class="nav-link"
+                                        href="/code/évènements.html"
                                         >Les évènements associatifs</a
                                     >
                                 </li>
                                 <li class="navbar-item">
-                                    <a class="nav-link" href="#">L'équipe !</a>
-                                </li>
-                                <li class="navbar-item">
                                     <a
+                                        class="nav-link"
+                                        href="/code/annuaire.html"
+                                        >L'Annuaire de l'association !</a
+                                    >
+                                </li>
+                                <!-- <li class="navbar-item">
+                                    <a class="nav-link" href="#">L'équipe !</a>
+                                </li> -->
+
+                                <li
+                                    onclick="document.getElementById('formulaireContact').style.display='block'"
+                                    class="navbar-item"
+                                    data-toggle="modal"
+                                    data-target="#exampleModalCenter"
+                                >
+                                    <a
+                                        id="formulaireContact"
                                         class="nav-link"
                                         href="#"
                                         tabindex="-1"
@@ -72,11 +88,199 @@
                                     >
                                 </li>
                             </ul>
+                            <!-- Boutton de connection a travailler -->
+                            <button
+                                onclick="document.getElementById('form-inline').style.display='block'"
+                                class="btn-connect btn btn-success"
+                                data-toggle="modal"
+                                data-target="#form-connection"
+                            >
+                                se connecter
+                            </button>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
+        <!-- modal connection -->
+        <!-- Modal -->
+        <div
+            class="modalCustom form-inline modal fade"
+            id="form-connection"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="m-auto modal-title" id="exampleModalLabel">
+                            Connexion à votre compte
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <form action="">
+                                <label for="mail"> </label>
+                                <legend>
+                                    Adresse mail
+                                    <input
+                                        type="mail"
+                                        placeholder="exemple@mail.fr"
+                                    />
+                                </legend>
+                                <label for="password"></label>
+                                <legend>
+                                    Mot de passe
+                                    <input
+                                        type="password"
+                                        placeholder="........."
+                                    />
+                                </legend>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                        >
+                            Annuler
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Se connecter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de contact-->
+        <div
+            class="modal fade"
+            id="exampleModalCenter"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5
+                            class="m-auto modal-title"
+                            id="exampleModalCenterTitle"
+                        >
+                            Formulaire de contact
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="contact-wrapper">
+                        <form
+                            class="form-horizontal"
+                            method="post"
+                            action="contact.php"
+                        >
+                            <h1 class="section-header">
+                                Posez-nous vos questions !
+                            </h1>
+
+                            <label for="name">Nom</label>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="nom"
+                                name="name"
+                                required
+                            />
+
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="email@mail.com"
+                                name="email"
+                                required
+                            />
+
+                            <label for="phone">Téléphone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="0600000000"
+                                name="phone"
+                            />
+
+                            <label for="category">Catégorie de question</label>
+                            <select id="category" name="category">
+                                <option value="default">
+                                    Choisissez une catégorie
+                                </option>
+                                <option value="help">Aide</option>
+                                <option value="pro-contact">
+                                    Contact professionnel
+                                </option>
+                            </select>
+
+                            <label for="message">Message</label>
+                            <textarea
+                                rows="10"
+                                id="message"
+                                name="message"
+                                required
+                            ></textarea>
+
+                            <div class="advert-wrapper">
+                                <p>Souhaitez-vous recevoir nos news ?</p>
+                                <input
+                                    type="radio"
+                                    id="yes"
+                                    name="news-question"
+                                    value="yes"
+                                    checked
+                                />
+                                <label for="yes">Oui</label>
+                                <input
+                                    type="radio"
+                                    id="no"
+                                    name="news-question"
+                                    value="no"
+                                />
+                                <label for="no">Non</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                        >
+                            Annuler
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Soumetre
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin modal -->
         <div>
             <ul class="d-flex justify-content-around">
                 <li class="slogan-1">SOLIDARITE</li>
@@ -250,10 +454,10 @@
                     >
                 </div>
                 <p>Auteur du site Saint Marc Jonathan by Halima Boucetta</p>
-                <p>@Copyright 2022</p>
+                <p class="copyright">@Copyright 2022</p>
             </div>
         </footer>
-        <script src="app.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -269,5 +473,6 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"
         ></script>
+        <script src="/code/app.js"></script>
     </body>
 </html>
