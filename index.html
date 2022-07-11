@@ -15,7 +15,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         />
-        <title>Association ALEHA</title>
+        <title>Association ALEHAN</title>
     </head>
     <body>
         <!-- Nav bar Bootstrap ************************************-->
@@ -23,16 +23,22 @@
             <div class="row">
                 <div class="col-12">
                     <nav
-                        class="navbar navbar-expand-lg navbar-dark bg-danger text-white"
+                        class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient text-white"
                     >
                         <img
                             class="navbar-brand img-logo"
                             src="/code/source/LOGO2 alehan.jpg"
                             alt="Logo de l'Association"
                         />
-                        <a id="" class="navbar-brand" href="#"
-                            >ASSOCIATION ALEHAN
-                        </a>
+                        <h3
+                            style="text-align: center"
+                            id=""
+                            class="navbar-brand"
+                        >
+                            ASSOCIATION ALEHAN <br />
+                            Association à but non lucratif .Loi 1901.
+                        </h3>
+
                         <button
                             class="navbar-toggler"
                             type="button"
@@ -81,227 +87,34 @@
                                     <a
                                         id="formulaireContact"
                                         class="nav-link"
-                                        href="#"
+                                        href="/code/formulaire.html"
                                         tabindex="-1"
                                         aria-disabled="true"
                                         >Nous contactez</a
                                     >
                                 </li>
                             </ul>
-                            <!-- Boutton de connection a travailler -->
-                            <button
-                                onclick="document.getElementById('form-inline').style.display='block'"
-                                class="btn-connect btn btn-success"
-                                data-toggle="modal"
-                                data-target="#form-connection"
-                            >
-                                se connecter
-                            </button>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-        <!-- modal connection -->
-        <!-- Modal -->
-        <div
-            class="modalCustom form-inline modal fade"
-            id="form-connection"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-        >
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="m-auto modal-title" id="exampleModalLabel">
-                            Connexion à votre compte
-                        </h5>
-                        <button
-                            type="button"
-                            class="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div>
-                            <form action="">
-                                <label for="mail"> </label>
-                                <legend>
-                                    Adresse mail
-                                    <input
-                                        type="mail"
-                                        placeholder="exemple@mail.fr"
-                                    />
-                                </legend>
-                                <label for="password"></label>
-                                <legend>
-                                    Mot de passe
-                                    <input
-                                        type="password"
-                                        placeholder="........."
-                                    />
-                                </legend>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-dismiss="modal"
-                        >
-                            Annuler
-                        </button>
-                        <button type="button" class="btn btn-success">
-                            Se connecter
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal de contact-->
-        <div
-            class="modal fade"
-            id="exampleModalCenter"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5
-                            class="m-auto modal-title"
-                            id="exampleModalCenterTitle"
-                        >
-                            Formulaire de contact
-                        </h5>
-                        <button
-                            type="button"
-                            class="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="contact-wrapper">
-                        <form
-                            class="form-horizontal"
-                            method="post"
-                            action="contact.php"
-                        >
-                            <h1 class="section-header">
-                                Posez-nous vos questions !
-                            </h1>
-
-                            <label for="name">Nom</label>
-                            <input
-                                type="text"
-                                id="name"
-                                placeholder="nom"
-                                name="name"
-                                required
-                            />
-
-                            <label for="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="email@mail.com"
-                                name="email"
-                                required
-                            />
-
-                            <label for="phone">Téléphone</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                placeholder="0600000000"
-                                name="phone"
-                            />
-
-                            <label for="category">Catégorie de question</label>
-                            <select id="category" name="category">
-                                <option value="default">
-                                    Choisissez une catégorie
-                                </option>
-                                <option value="help">Aide</option>
-                                <option value="pro-contact">
-                                    Contact professionnel
-                                </option>
-                            </select>
-
-                            <label for="message">Message</label>
-                            <textarea
-                                rows="10"
-                                id="message"
-                                name="message"
-                                required
-                            ></textarea>
-
-                            <div class="advert-wrapper">
-                                <p>Souhaitez-vous recevoir nos news ?</p>
-                                <input
-                                    type="radio"
-                                    id="yes"
-                                    name="news-question"
-                                    value="yes"
-                                    checked
-                                />
-                                <label for="yes">Oui</label>
-                                <input
-                                    type="radio"
-                                    id="no"
-                                    name="news-question"
-                                    value="no"
-                                />
-                                <label for="no">Non</label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-dismiss="modal"
-                        >
-                            Annuler
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            Soumetre
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- fin modal -->
         <div>
             <ul class="d-flex justify-content-around">
-                <li class="slogan-1">SOLIDARITE</li>
-                <li class="slogan-2">INSERTION</li>
-                <li class="slogan-3">PREVENTION</li>
+                <a href="#solidaires"> <li class="slogan-1">SOLIDARITE</li></a>
+                <a href="#insertions"> <li class="slogan-2">INSERTION</li></a>
+                <a href="#preventions"> <li class="slogan-3">PREVENTION</li></a>
             </ul>
         </div>
         <div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="">
-                        <div class="">
-                            <h4 class="display-4">
-                                A travers une démarche participative et
-                                citoyenne, les actions de l'association visent à
-                                rendrent le public des quartiers, acteur de leur
-                                environnement et de leur avenir, de manière
-                                individuelle et collective.
-                            </h4>
-                        </div>
-                    </div>
+                    <h6 class="display-4">
+                        A travers une démarche participative et citoyenne, les
+                        actions de l'association visent à rendrent le public des
+                        quartiers, acteur de leur environnement et de leur
+                        avenir, de manière individuelle et collective.
+                    </h6>
                 </div>
             </div>
         </div>
@@ -311,21 +124,17 @@
             <img class="photo" src="/code/source/LOGO2 alehan.jpg" alt="" />
             <img class="photo" src="/code/source/LOGO2 alehan.jpg" alt="" />
             <img class="photo" src="/code/source/LOGO2 alehan.jpg" alt="" />
-            <img class="photo" src="/code/source/LOGO2 alehan.jpg" alt="" />
-            <img class="photo" src="/code/source/LOGO2 alehan.jpg" alt="" />
         </div>
-
-        <!-- <img
-            class="img-header"
-            src="/oahu.jpg"
-            alt="Image de l'entête du site "
-        /> -->
         <!-- Card -->
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-8">
                     <div class="jumbotron">
-                        <h1 style="color: red" class="display-4">
+                        <h1
+                            id="solidaires"
+                            style="color: red"
+                            class="display-4"
+                        >
                             ACTIONS SOLIDAIRES
                         </h1>
                         <p class="lead">
@@ -354,69 +163,72 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="jumbotron">
-                        <h1 style="color: green" class="display-4">
-                            ACTIONS D'INSERTIONS
-                        </h1>
-                        <p class="lead">Aide et soutien :</p>
-                        <hr class="my-4" />
-                        <ul>
-                            <li class="puceOn">
-                                Aux démarches vers l'emploi, formations...
-                            </li>
-                            <li class="puceOn">
-                                Valorisations des qualités et compétences
-                            </li>
-                            <li class="puceOn">
-                                Rencontres spécifiques, adaptées (avocat,
-                                médecin...)
-                            </li>
-                        </ul>
-                        <a
-                            class="btn btn-lg btn-outline-warning"
-                            href="#"
-                            role="button"
-                        >
-                            En savoir plus
-                        </a>
+
+                <div class="">
+                    <div class="col-12">
+                        <div class="jumbotron">
+                            <h1
+                                id="insertions"
+                                style="color: green"
+                                class="display-4"
+                            >
+                                ACTIONS D'INSERTIONS
+                            </h1>
+                            <p class="lead">Aide et soutien :</p>
+                            <hr class="my-4" />
+                            <ul>
+                                <li class="puceOn">
+                                    Aux démarches vers l'emploi, formations...
+                                </li>
+                                <li class="puceOn">
+                                    Valorisations des qualités et compétences
+                                </li>
+                                <li class="puceOn">
+                                    Rencontres spécifiques, adaptées (avocat,
+                                    médecin...)
+                                </li>
+                            </ul>
+                            <a
+                                class="btn btn-lg btn-outline-warning"
+                                href="#"
+                                role="button"
+                            >
+                                En savoir plus
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="jumbotron">
-                        <h1 class="display-4">ACTIONS PREVENTIONS</h1>
-                        <p class="lead">
-                            Aide aux jeunes et parents pour surmonter les
-                            situations difficiles ou de rupture avec
-                            l'environnement familial, scolaire, professionnel ou
-                            social.
-                        </p>
-                        <hr class="my-4" />
-                        <ul>
-                            <li class="puceOn">
-                                Mettre en lien les jeunes et les familles avec
-                                des oéprateurs compétents pour répondre à leurs
-                                questionnement.
-                            </li>
-                            <li class="puceOn">
-                                Action pour lutter contre la récidive
-                            </li>
-                        </ul>
-                        <a
-                            class="btn btn-lg btn-outline-warning"
-                            href="#"
-                            role="button"
-                        >
-                            En savoir plus
-                        </a>
+                <div class="">
+                    <div class="col-8">
+                        <div class="jumbotron">
+                            <h1 id="preventions" class="display-4">
+                                ACTIONS PREVENTIONS
+                            </h1>
+                            <p class="lead">
+                                Aide aux jeunes et parents pour surmonter les
+                                situations difficiles ou de rupture avec
+                                l'environnement familial, scolaire,
+                                professionnel ou social.
+                            </p>
+                            <hr class="my-4" />
+                            <ul>
+                                <li class="puceOn">
+                                    Mettre en lien les jeunes et les familles
+                                    avec des oéprateurs compétents pour répondre
+                                    à leurs questionnement.
+                                </li>
+                                <li class="puceOn">
+                                    Action pour lutter contre la récidive
+                                </li>
+                            </ul>
+                            <a
+                                class="btn btn-lg btn-outline-warning"
+                                href="#"
+                                role="button"
+                            >
+                                En savoir plus
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -433,7 +245,7 @@
         </div>
         <!-- Footer -->
         <footer>
-            <div class="bg-danger text-white">
+            <div class="bg-secondary bg-gradient text-white">
                 <p>
                     <a style="color: black" href="#">Retour haut de page</a>
                 </p>

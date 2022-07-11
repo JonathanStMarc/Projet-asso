@@ -1,13 +1,14 @@
-body {
+* {
+    text-align: center;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     /* background-color: rgb(228, 228, 172) !important; */
 }
 a {
     font-size: 1.5rem;
 }
 .img-logo {
-    width: 20%;
+    width: 10%;
     border-radius: 50%;
 }
 .img-header {
@@ -21,15 +22,11 @@ a {
     margin: 10px;
 }
 footer {
-    text-align: center;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
-h2 {
-    text-align: center;
-}
-li:not(.puceOn) {
+li {
     list-style-type: none;
 }
 .card {
@@ -79,113 +76,49 @@ li:not(.puceOn) {
     font-size: 2em;
 }
 /* annuaire */
-.navbarAnnuaire {
-    border: 2px solid red;
+.containerAnnuaire {
+    display: grid;
+    border: thick double #32a1ce;
     border-radius: 10px;
-    background-color: #fff;
-    height: 8rem;
-    margin: 2rem;
-    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+}
+.itemAnnuaire {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 1rem;
+}
+.titleAnnuaire {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 h1.titreAnnuaire {
     display: flex;
     justify-content: center;
 }
-.boby {
-    height: 100%;
-}
+/* fin annuaire */
 .photoAnnuaire {
     align-items: center;
     justify-content: space-around;
 }
 .imageAnnuaire {
-    margin: 1rem;
+    margin: 0.5rem;
     border-radius: 20px 20px;
     align-items: center;
+    flex-wrap: wrap;
 }
-/* Formulaire de contact */
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    -webkit-box-shadow: 0px 0px 36px -7px rgba(171, 171, 171, 1);
-    -moz-box-shadow: 0px 0px 36px -7px rgba(171, 171, 171, 1);
-    box-shadow: 0px 0px 36px -7px rgba(171, 171, 171, 1);
-    border-radius: 20px;
-    margin-bottom: 2rem;
-}
-.contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-}
-input,
-textarea,
-select {
-    margin-bottom: 1rem;
-    border-radius: 7px;
-    padding: 0.3rem;
-    border: solid 1px;
-}
-textarea {
-    max-width: 400px;
-    letter-spacing: 1px;
-}
-input:focus,
-textarea:focus,
-select:focus,
-button:focus {
-    outline: none;
-    -webkit-box-shadow: 0px 0px 11px -7px #bac4bf;
-    -moz-box-shadow: 0px 0px 11px -7px #bac4bf;
-    box-shadow: 0px 0px 11px -7px #bac4bf;
-    border: solid 1px #d5e1db;
-}
-label {
-    margin-bottom: 0.5rem;
-}
-.section-header {
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    font: 300 2rem "Oswald", sans-serif;
-    letter-spacing: 6px;
-    margin-bottom: 25px;
-}
-.form-horizontal {
-    max-width: 400px;
-    font-family: "Lato";
-    font-weight: 400;
-}
-.send-button {
-    margin-top: 15px;
-    height: 34px;
-    width: 400px;
-    background-color: #d5e1db;
-    border: none;
-    border-radius: 7px;
-    font: 300 14px "Lato", sans-serif;
-    letter-spacing: 2px;
-}
-.send-button:hover {
-    cursor: pointer;
-    color: white;
-    background-color: #bac4bf;
-}
-.advert-wrapper {
-    color: grey;
-    font-size: 0.8rem;
-    margin-top: 2rem;
-}
+
 .modalCustom {
     display: inline;
     justify-content: center;
     align-items: center;
     width: 10rem;
 }
+/* .row {
+    margin: auto;
+} */

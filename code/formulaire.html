@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mon formulaire de contact</title>
+        <meta charset="utf-8" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,100,300"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body>
+        <div class="bgContact" style="text-align: center">
+            <br />
+            <h2>Où peux-tu nous retrouver :</h2>
+
+            <img
+                style="width: 850px"
+                src="/sources/contact-600x337.jpg"
+                alt=""
+            />
+            <div class="row">
+                <div class="col-4">
+                    <i class="iconContact bi bi-telephone">
+                        <br />
+                        Numéro :</i
+                    ><br />
+                    <p>0450606060</p>
+                    <p>06.50.42.91.57</p>
+                </div>
+                <div class="col-4">
+                    <i class="iconContact bi bi-house"
+                        ><br />
+                        Adresse :</i
+                    >
+                    <p>
+                        1 Allée du maraicher <br />73590 Saint Jean de Maurienne
+                    </p>
+                </div>
+                <div class="col-4">
+                    <i class="iconContact bi bi-envelope"
+                        ><br />
+                        Email :</i
+                    >
+                    <p>alehan13220@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <h1 style="text-align: center">Formulaire de contact</h1>
+        <div class="contact-wrapper">
+            <form class="form-horizontal" method="post" action="contact.php">
+                <h1 class="section-header">Posez-nous vos questions !</h1>
+
+                <label for="name">Nom</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="nom"
+                    name="name"
+                    required
+                />
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="email@mail.com"
+                    name="email"
+                    required
+                />
+
+                <label for="phone">Téléphone</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="0600000000"
+                    name="phone"
+                />
+
+                <label for="category">Catégorie de question</label>
+                <select id="category" name="category">
+                    <option value="default">Choisissez une catégorie</option>
+                    <option value="help">Besoin d'aide</option>
+                    <option value="pro-contact">Contact professionnel</option>
+                    <option value="info">information</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea
+                    rows="10"
+                    id="message"
+                    name="message"
+                    required
+                ></textarea>
+                <!-- <div class="advert-wrapper">
+                    <p>Souhaitez-vous recevoir nos news ?</p>
+                    <input
+                        type="radio"
+                        id="yes"
+                        name="news-question"
+                        value="yes"
+                        checked
+                    />
+                    <label for="yes">Oui</label>
+                    <input
+                        type="radio"
+                        id="no"
+                        name="news-question"
+                        value="no"
+                    />
+                    <label for="no">Non</label>
+                </div> -->
+
+                <button
+                    style="width: 350px"
+                    class="text-align-center align-items-center send-button"
+                    id="submit"
+                    type="submit"
+                >
+                    Envoyer le formulaire
+                </button>
+            </form>
+        </div>
+        <!-- bootstrap icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+            integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo"
+            crossorigin="anonymous"
+        />
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 255, 0.219);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            -webkit-box-shadow: 0px 0px 36px -7px rgba(171, 171, 171, 1);
+            -moz-box-shadow: 0px 0px 36px -7px rgba(171, 171, 171, 1);
+            box-shadow: 0px 0px 36px -7px rgba(171, 171, 171, 1);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+        .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        input,
+        textarea,
+        select {
+            margin-bottom: 1rem;
+            border-radius: 7px;
+            padding: 0.3rem;
+            border: solid 1px;
+        }
+        textarea {
+            max-width: 400px;
+            letter-spacing: 1px;
+        }
+        input:focus,
+        textarea:focus,
+        select:focus,
+        button:focus {
+            outline: none;
+            -webkit-box-shadow: 0px 0px 11px -7px #bac4bf;
+            -moz-box-shadow: 0px 0px 11px -7px #bac4bf;
+            box-shadow: 0px 0px 11px -7px #bac4bf;
+            border: solid 1px #d5e1db;
+        }
+        label {
+            margin-bottom: 0.5rem;
+        }
+        .section-header {
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            font: 300 2rem "Oswald", sans-serif;
+            letter-spacing: 6px;
+            margin-bottom: 25px;
+        }
+        .form-horizontal {
+            max-width: 400px;
+            font-family: "Lato";
+            font-weight: 400;
+        }
+        .send-button {
+            margin-top: 15px;
+            height: 34px;
+            width: 400px;
+            background-color: #d5e1db;
+            border: none;
+            border-radius: 7px;
+            font: 300 14px "Lato", sans-serif;
+            letter-spacing: 2px;
+        }
+        .send-button:hover {
+            cursor: pointer;
+            color: white;
+            background-color: #bac4bf;
+        }
+        .advert-wrapper {
+            color: grey;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+        }
+        /* fin du formulaire de contact */
+        .iconContact {
+            font-size: x-large;
+        }
+    </style>
+</html>
